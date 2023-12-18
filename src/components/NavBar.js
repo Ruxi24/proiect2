@@ -6,14 +6,14 @@ export default function NavBar(){
             <nav>
                 <ul>
                     <li>
-                        <Link legacyBehavior href="proiect2/src/app/page.js"> 
-                            <a>Home</a>  
+                        <Link href="/"> 
+                           Acasa  
                         </Link>
-                        <Link legacyBehavior href="proiect2/src/app/search/page.js">
-                            <a>Cauta</a>
+                        <Link href="/search">
+                            Cauta
                         </Link> 
-                        <Link legacyBehavior href="proiect2/src/app/favourites/page.js">
-                            <a>Favorite</a>
+                        <Link href="/favourites">
+                            Favorite
                         </Link>
                     </li>
                 </ul>
