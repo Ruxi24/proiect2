@@ -1,5 +1,10 @@
+import { Search } from "@/components/search";
+
 export default function search(){
     return(
-        <div>Cauta</div>
+        <div>
+            <div>Cauta</div>
+            <Search/>
+        </div>
     )
 }

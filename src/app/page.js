@@ -20,13 +20,17 @@ const handleAddPost = async (nume, id) => {
 };
 
 
-export default function Home() {
+
+
+export default async function Home() {
+  
   return (
     <div>
       <br/>
-      <div onClick={() => handleAddPost("Berlin", '13')}>
+      <div onClick={() => handleAddPost("Stockholm", '123')}>
         add post
       </div>
+      
       <br/>
       Home
     </div>

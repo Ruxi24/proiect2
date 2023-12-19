@@ -1,0 +1,13 @@
+.Container{
+    padding: 25px 50px;
+}
+
+.ToateOrasele{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ToateOrasele > *{
+    padding: 10px;
+    margin: 0 20px;
+}
