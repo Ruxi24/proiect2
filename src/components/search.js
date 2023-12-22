@@ -1,4 +1,5 @@
 'use client'
+import styles from "../components/search.module.css"
 
 import { useState } from "react";
 
@@ -14,11 +15,12 @@ export const Search = () => {
         }
       };
     return(
-        <div>
+        <div className={styles.containerSearch}>
             <input type="text"
+             placeholder="Cauta un oras..."
              onKeyDown={EnterPress}
              onChange={(e) => setCity(e.target.value)}/>
-            <button>search</button>
+            <button onClick={GoToCitiesPage}>search</button>
         </div>
     )
 }

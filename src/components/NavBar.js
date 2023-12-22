@@ -7,9 +7,6 @@ export default function NavBar(){
             <Link href="/"> 
                Acasa  
             </Link>
-            <Link href="/search">
-                Cauta
-            </Link> 
             <Link href="/favourites">
                 Favorite
             </Link>   

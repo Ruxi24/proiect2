@@ -13,14 +13,14 @@ export async function fetchData(){
 export default async function favourites(){
     const oraseFavorite = await fetchData();
     return(
-        <div>
-            <h1>Favorite</h1>
-            <br/>
-            {oraseFavorite.map(oras => (
-                <div key={oras._id} className={styles.oras}>
-                    <Link href={oras.name + '/' + oras.id}>{oras.country}/ {oras.admin1} / {oras.name}</Link>
-                </div>
-            ))}
+        <div className={styles.containerFavorite}>
+            <div className={styles.containerLinkuri}>
+                {oraseFavorite.map(oras => (
+                    <div key={oras._id} className={styles.oras}>
+                        <Link href={oras.name + '/' + oras.id}>{oras.country}/ {oras.admin1} / {oras.name}</Link>
+                    </div>
+                ))}
+            </div>
         </div>
     )
 }

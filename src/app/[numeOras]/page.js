@@ -10,7 +10,7 @@ const NumeOras = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${numeOras}&count=10&language=en&format=json`);
+                const response = await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${numeOras}&count=10&language=ro&format=json`);
                 const data = await response.json();
                 setSearchResults(data);
                 console.log(data.results)
