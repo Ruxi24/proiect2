@@ -1,3 +1,6 @@
+import Link from "next/link";
+import styles from './page.module.css';
+
 export async function fetchData(){
     const oraseFavorite = await fetch("http://localhost:3000/api/getFavouriteCities",{
           cache: 'no-cache'
@@ -14,8 +17,8 @@ export default async function favourites(){
             <h1>Favorite</h1>
             <br/>
             {oraseFavorite.map(oras => (
-                <div key={oras._id}>
-                {oras.name}
+                <div key={oras._id} className={styles.oras}>
+                    <Link href={oras.name + '/' + oras.id}>{oras.country}/ {oras.admin1} / {oras.name}</Link>
                 </div>
             ))}
         </div>

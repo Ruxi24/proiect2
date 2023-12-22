@@ -2,14 +2,14 @@ import { NextResponse } from "next/server";
 import City from "../../../../models/City";
 import Connect from "../../../../connect";
 export const POST = async (req, res) => { 
-    const { name, id } = await req.json();
+    const { name, id, admin1, country } = await req.json();
     try {
         await Connect();
         const existingCity = await City.findOne({
             id: id
         })
         if(!existingCity){
-            const newCity = await City.create({ name, id});
+            const newCity = await City.create({ name, id, admin1, country});
             console.log(newCity);
             return NextResponse.json({msg: ["City added to favorites"], success: true,});
         }

@@ -11,6 +11,14 @@ const citySchema = new Schema({
         type: String,
         required: true
     },
-})
+    admin1: {
+        type: String,
+        required: true
+    },
+    country: {
+        type: String,
+        required: true
+    },
+    })
 
 export default mongoose.models.City || mongoose.model("City", citySchema)

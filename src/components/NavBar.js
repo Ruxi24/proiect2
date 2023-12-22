@@ -1,24 +1,18 @@
 import Link from "next/link";
+import styles from "../components/NavBar.module.css"
 
 export default function NavBar(){
     return(
-        <div>
-            <nav>
-                <ul>
-                    <li>
-                        <Link href="/"> 
-                           Acasa  
-                        </Link>
-                        <Link href="/search">
-                            Cauta
-                        </Link> 
-                        <Link href="/favourites">
-                            Favorite
-                        </Link>
-                    </li>
-                </ul>
-            </nav>
-            
+        <div className={styles.containerNavBar}>
+            <Link href="/"> 
+               Acasa  
+            </Link>
+            <Link href="/search">
+                Cauta
+            </Link> 
+            <Link href="/favourites">
+                Favorite
+            </Link>   
         </div>
     )
     
